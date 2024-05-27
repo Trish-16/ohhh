@@ -1,0 +1,10 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+{% block body %}
+    <h1>Вы действительно хотите удалить пост?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" value="Yes">Delete</button>
+        <a href="/">Cancel</a>
+    </form>
+{% endblock body %}
